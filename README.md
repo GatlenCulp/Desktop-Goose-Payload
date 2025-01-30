@@ -29,6 +29,14 @@ Currently for MacOS only.
    - Unzips and launches the goose
    - Chaos ensues! 🦢
 
+## KILL HIM
+
+Fine, do what you must
+
+```bash
+killall "Desktop Goose"
+```
+
 ## 📱 FlipperZero Installation
 
 ### Method 1: qFlipper
@@ -46,3 +54,24 @@ Tests are written using the Bash Automated Testing System (BATS) and can be foun
 ### Auto-transfer Development
 
 Working on automating the ducky script transfer process using the Flipper CLI or ufbt.
+
+### Goose Customization
+
+To add your own customizations, fork this repo (needed since the ducky script pulls from this repo). And change the references in `./payload.sh` and `./ducky-scripts/mac-desktop-goose.txt` to point to your repo.
+
+Unzip the `./data/desk-goose-*.zip` files, make edits to the directories, then rezip.
+
+**MacOS**
+
+- More memes? Want to show your friends some funny hahas? Add them in `./data/desk-goose-*/Resources/Memes`
+- More messages? Taunts perhaps? Add them in `./data/desk-goose-*/Resources/Notes`
+- Other config? Edit them in `./data/desk-goose-*/Resources/...` I don't actually know...
+
+**Windows**
+[text](data/desk-goose-win/DesktopGoose%20v0.31/config.ini)
+
+**Other Resources**
+
+https://lim10dev.github.io/goose-customizer/
+
+https://desktopgooseunofficial.github.io/ResourceHub/
