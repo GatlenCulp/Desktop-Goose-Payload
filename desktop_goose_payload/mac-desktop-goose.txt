@@ -1,0 +1,18 @@
+REM Run Desktop Goose after installing
+REM Required Apps: Terminal
+
+REM Title: Desktop Goose
+REM Author: Gatlen Culp
+REM Target: MacOS 
+REM Version: 1.0
+REM Category: Prank
+
+ID 05ac:021e Apple:Keyboard
+DELAY 3000
+F4
+DELAY 2500
+STRING Terminal
+DELAY 2500
+ENTER
+DELAY 1500
+
