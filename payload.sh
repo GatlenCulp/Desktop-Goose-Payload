@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # To run this, use:
-# curl -sSL https://raw.githubusercontent.com/GatlenCulp/Desktop-Goose-Payload/main/desktop_goose_payload/install.sh | bash
+# curl -sSL https://raw.githubusercontent.com/GatlenCulp/Desktop-Goose-Payload/main/payload.sh | bash
 
 set -e  # Exit on error
 

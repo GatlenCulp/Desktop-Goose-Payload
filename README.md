@@ -1,43 +1,48 @@
-# Desktop-Goose-Payload
+# 🪿 Desktop Goose Payload 🪿
 
 ![Uses the Cookiecutter Data Science project template, GOTem style](https://img.shields.io/badge/GOTem-Project%20Instance-328F97?logo=cookiecutter)
 
-This is a work-in-progress Ducky Script to install and launch [Desktop Goose](https://samperson.itch.io/desktop-goose) onto the laptops of unsuspecting colleagues to teach them the dangers of leaving their laptops exposed in their absence >=\]. Currently only for MacOS
+A mischievous Ducky Script that installs [Desktop Goose](https://samperson.itch.io/desktop-goose) onto unsuspecting colleagues' laptops, teaching them valuable lessons about computer security... one honk at a time >=\]
 
-This project is for purely educational and fun purposes.
+Currently for MacOS only.
+
+> ⚠️ **Note**: This project is for educational and entertainment purposes only. Please use responsibly!
 
 [![Desktop Goose](https://img.youtube.com/vi/EQx6fyrZDWM/0.jpg)](https://www.youtube.com/watch?v=EQx6fyrZDWM)
 
-### Requirements
+## 🛠️ Requirements
 
-- Rubber Ducky or another keyboard-emulating device
-- Internet Access
-- Spotlight or another searchbar linked to CMD + Space
+- A Rubber Ducky or similar keyboard-emulating device (like FlipperZero)
+- Internet access
+- Target machine must:
+  - Run MacOS
+  - Have Spotlight or some other search function enabled with CMD + Space
+  - Be unlocked (obviously!)
 
-### Process
+## 🚀 How It Works
 
-The ducky script `./ducky-scripts/mac-desktop-goose.txt` emulates a keyboard to launch the terminal and downloads + runs a shell script from this GitHub Repo `payload.sh`. The shell script downloads Desktop Goose from `./data/desk-goose-mac.zip` to the `/tmp` directory, unzips it, and runs it.
+1. The Ducky Script (`./ducky-scripts/mac-desktop-goose.txt`) emulates keyboard inputs to:
+   - Launch the terminal via Spotlight
+   - Download and execute our payload script from this repo
+1. The payload script (`payload.sh`):
+   - Downloads Desktop Goose from `./data/desk-goose-mac.zip` to a new temporary directory.
+   - Unzips and launches the goose
+   - Chaos ensues! 🦢
 
-### FlipperZero Install
+## 📱 FlipperZero Installation
 
-Copy `./ducky-scripts/mac-desktop-goose.txt` onto your FlipperZero's SD card by downloading qFlipper, going to `SD Card/badusb`, and copying the text file over.
+### Method 1: qFlipper
 
-Or even better use [Flipper Lab](https://lab.flipper.net/archive).
+1. Download and install [qFlipper](https://flipperzero.one/update) (or use [Flipper Lab](https://lab.flipper.net/archive))
+1. Navigate to `SD Card/badusb` in qFlipper
+1. Copy `./ducky-scripts/mac-desktop-goose.txt` to this location
 
-Then run the ducky script as you would any other.
+## 🤝 Contributing
 
-### Contributing
+### Testing
 
-**Tests**
-Tests are made with Bash Automated Testing System (BATS) can be found in `./tests/test_payload.bats`.
+Tests are written using the Bash Automated Testing System (BATS) and can be found in `./tests/test_payload.bats`. They don't currently work lol, will fix later. 🪿
 
-**Auto-transfer**
-https://docs.flipper.net/development/cli
+### Auto-transfer Development
 
-Use screen to enter the flipper CLI. I can't figure out where to go from here tbh. `storage list /ext/badusb` but I don't know how to do a tranfer from my own computer.
-
-`brew install ufbt` might do something but idk. Need to look into later.
-
-### Thanks
-
-Thanks to samperson who made [Desktop Goose](https://samperson.itch.io/desktop-goose)
+Working on automating the ducky script transfer process using the Flipper CLI or ufbt.
