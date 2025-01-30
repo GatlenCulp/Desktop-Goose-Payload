@@ -20,6 +20,14 @@ The ducky script `./ducky-scripts/mac-desktop-goose.txt` emulates a keyboard to 
 
 ### FlipperZero Install
 
-Copy `/ducky-scripts/mac-desktop-goose.txt` onto your FlipperZero's SD card by downloading qFlipper, going to `SD Card/badusb`, and copying the text file over.
+Copy `./ducky-scripts/mac-desktop-goose.txt` onto your FlipperZero's SD card by downloading qFlipper, going to `SD Card/badusb`, and copying the text file over.
 
 Then run the ducky script as you would any other.
+
+### Contributing
+
+Tests are made with Bash Automated Testing System (BATS) can be found in `./tests/test_payload.bats`.
+
+### Thanks
+
+Thanks to samperson who made [Desktop Goose](https://samperson.itch.io/desktop-goose)

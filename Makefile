@@ -10,15 +10,15 @@ DOCS_PORT ?= 8000
 
 .PHONY: payload
 payload: ## Run payload script
-	bash ./desktop_goose_payload/install.sh
+	bash ./payload.sh
 
 .PHONY: payload-remote
 payload-remote: ## Run payload script but from remote repo
-	curl -sSL https://raw.githubusercontent.com/GatlenCulp/Desktop-Goose-Payload/main/desktop_goose_payload/install.sh | bash
+	curl -sSL https://raw.githubusercontent.com/GatlenCulp/Desktop-Goose-Payload/main/payload.sh | bash
 
 .PHONY: kill
 kill: ## Kill the desktop goose
-	bash ./desktop_goose_payload/kill.sh
+	killall "Goose Desktop"
 
 #################################################################################
 # UTILITIES                                                                     #

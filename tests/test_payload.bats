@@ -18,8 +18,8 @@ teardown() {
 }
 
 @test "E2E: Desktop Goose installs successfully" {
-    # Run the install script
-    run bash "desktop_goose_payload/install.sh"
+    # Run the install script with full path
+    run bash "./payload.sh"
     
     # Check exit status
     [ "$status" -eq 0 ]
