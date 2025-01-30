@@ -18,7 +18,7 @@ payload-remote: ## Run payload script but from remote repo
 
 .PHONY: kill
 kill: ## Kill the desktop goose
-	killall "Goose Desktop"
+	killall "Desktop Goose"
 
 #################################################################################
 # UTILITIES                                                                     #

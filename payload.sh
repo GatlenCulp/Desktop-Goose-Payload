@@ -5,7 +5,7 @@
 
 set -e  # Exit on error
 
-export INSTALL_DIR="/tmp"
+export INSTALL_DIR="$(mktemp -d)"
 export MACOS_DOWNLOAD="https://raw.githubusercontent.com/GatlenCulp/Desktop-Goose-Payload/main/data/Desktop%20Goose%20for%20Mac%20v0.22.zip"
 export ZIP_PATH="$INSTALL_DIR/desktop-goose.zip"
 
