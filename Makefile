@@ -12,6 +12,10 @@ DOCS_PORT ?= 8000
 payload: ## Run payload script
 	bash ./desktop_goose_payload/install.sh
 
+.PHONY: payload-remote
+payload-remote: ## Run payload script but from remote repo
+	curl -sSL https://raw.githubusercontent.com/GatlenCulp/Desktop-Goose-Payload/main/desktop_goose_payload/install.sh | bash
+
 .PHONY: kill
 kill: ## Kill the desktop goose
 	bash ./desktop_goose_payload/kill.sh
@@ -52,9 +56,12 @@ publish-all: format lint publish docs-publish ## Run format, lint, publish packa
 
 
 .PHONY: clean
-clean: ## Delete all compiled Python files
+clean: ## Delete all compiled Python files and Desktop Goose installation files
 	find . -type f -name "*.py[co]" -delete
 	find . -type d -name "__pycache__" -delete
+	rm -rf "/tmp/Desktop Goose.app"
+	rm -f "/tmp/desktop-goose.zip"
+	rm -f "/tmp/Read me! Honk.rtf"
 
 
 .PHONY: lint ## Lint using ruff (use `make format` to do formatting)
@@ -90,8 +97,11 @@ docs-publish: ## Build and deploy documentation to GitHub Pages
 # TEST COMMANDS                                                                 #
 #################################################################################
 
-test: _prep ## Run all tests
-	pytest -vvv --durations=0
+# test: _prep ## Run all tests
+# 	pytest -vvv --durations=0
+
+test: ## Run BATS tests
+	bats tests --verbose-run
 
 test-fastest: _prep ## Run tests with fail-fast option
 	pytest -vvv -FFF

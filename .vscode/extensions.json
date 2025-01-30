@@ -68,7 +68,8 @@
 		"ibm.output-colorizer", // Automatically color-code VSCode Output logs
 		"usernamehw.errorlens", // Highlight errors in-line
 		"spmeesseman.vscode-taskexplorer",
-		"cvbenur.ducky-script-lang-vscode" // Task Explorer
+		"cvbenur.ducky-script-lang-vscode",
+		"jetmartin.bats" // Task Explorer
 	],
 	// List of extensions recommended by VS Code that should not be recommended for users of this workspace.
 	"unwantedRecommendations": [
