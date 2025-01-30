@@ -7,6 +7,15 @@ PYTHON_VERSION = 3.12
 PYTHON_INTERPRETER = python
 DOCS_PORT ?= 8000
 
+
+.PHONY: payload
+payload: ## Run payload script
+	bash ./desktop_goose_payload/install.sh
+
+.PHONY: kill
+kill: ## Kill the desktop goose
+	bash ./desktop_goose_payload/kill.sh
+
 #################################################################################
 # UTILITIES                                                                     #
 #################################################################################
@@ -33,7 +42,6 @@ requirements: ## Install Python Dep
 	
 	uv sync
 	
-
 
 
 publish-all: format lint publish docs-publish ## Run format, lint, publish package and docs
